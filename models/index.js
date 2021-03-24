@@ -9,4 +9,7 @@ module.exports = {
       if (err) console.log(err);
     });
   },
+  getAllTasks: (cb) => {
+    Item.find({}, cb);
+  },
 };

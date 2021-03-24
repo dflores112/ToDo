@@ -10,6 +10,7 @@ app.use('/', express.static(path.join(__dirname, '../client/dist/')));
 app.use(bodyParser.json());
 
 app.post('/tasklist', controllers.addTaskListItem);
+app.get('/tasklist', controllers.retrieveAllTasks);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
