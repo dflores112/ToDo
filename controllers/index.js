@@ -1,7 +1,3 @@
-// brings in models you can whatever you want ex models
-// run those model function
-// also responsible for the request and response
-
 const models = require('../models/index.js');
 
 module.exports = {
@@ -20,6 +16,16 @@ module.exports = {
         res.sendStatus(500);
       } else {
         res.status(200).send(data);
+      }
+    });
+  },
+
+  removeTaskItem: (req, res) => {
+    models.deleteItem(req.body.id, (err) => {
+      if (err) {
+        res.sendStatus(500);
+      } else {
+        res.status(200).send('deleted');
       }
     });
   },

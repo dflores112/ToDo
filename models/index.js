@@ -13,4 +13,7 @@ module.exports = {
   getAllTasks: (cb) => {
     Item.find({}, cb);
   },
+  deleteItem: (id, cb) => {
+    Item.deleteOne({ _id: id }, cb);
+  },
 };
