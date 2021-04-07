@@ -29,4 +29,14 @@ module.exports = {
       }
     });
   },
+  updateTaskItem: (req, res) => {
+    console.log(req)
+    // models.updateItem(id, item, (err) => {
+    //   if (err) {
+    //     res.sendStatus(500);
+    //   } else {
+    //     res.status(200).send('updated');
+    //   }
+    // });
+  },
 };

@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 app.post('/tasklist', controllers.addTaskListItem);
 app.get('/tasklist', controllers.retrieveAllTasks);
 app.delete('/taskList', controllers.removeTaskItem);
+app.put('/taskList', controllers.updateTaskItem);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

@@ -16,4 +16,7 @@ module.exports = {
   deleteItem: (id, cb) => {
     Item.deleteOne({ _id: id }, cb);
   },
+  updateItem: (id, item) => {
+    Item.updateOne({ _id: id, name: item });
+  },
 };
